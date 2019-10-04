@@ -1,0 +1,24 @@
+<mat-drawer-container>
+    <mat-drawer id="sidebar-left" #drawerLeft mode="side">
+        <app-sidebar></app-sidebar>
+    </mat-drawer>
+    <mat-drawer id="sidebar-right" position="end" #drawerRight mode="push">
+        <app-settings></app-settings>
+    </mat-drawer>
+    <mat-drawer-content>
+        <mat-toolbar color="primary">
+            <mat-toolbar-row>
+                <mat-icon matTooltip="Tile sheets" mat-raised-button (click)="drawerLeft.toggle()" class="pr3">menu</mat-icon>
+                <span>Level Editor</span>
+                <span class="spacer"></span>
+                <mat-icon matTooltip="Import" mat-raised-button (click)="tileSheetFileInput.click()" class="pr3">vertical_align_top</mat-icon>
+                <input hidden type="file" #tileSheetFileInput (change)="OnTileSheetFileInputChanged($event)" />
+                <mat-icon matTooltip="Save" mat-raised-button (click)="OnSaveClick()" class="pr3">save_alt</mat-icon>
+                <mat-icon matTooltip="Settings" mat-raised-button (click)="drawerRight.toggle()">settings</mat-icon>
+            </mat-toolbar-row>
+        </mat-toolbar>
+        <app-drawer></app-drawer>
+    </mat-drawer-content>
+</mat-drawer-container>
+
+<router-outlet></router-outlet>

@@ -1,0 +1,15 @@
+.canvas-collection {
+    position: relative;
+    overflow: auto;
+
+    img {
+        max-width: none;
+    }
+
+    canvas {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        cursor: pointer;
+    }
+}

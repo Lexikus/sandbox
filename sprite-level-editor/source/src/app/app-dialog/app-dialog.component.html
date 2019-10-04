@@ -1,0 +1,15 @@
+<h1 mat-dialog-title>Upload Spritesheet</h1>
+<div mat-dialog-content>
+	<div class="mb3">
+		<button mat-stroked-button type="button" (click)="imgFileInput.click()">Import</button>
+		<input hidden type="file" #imgFileInput (change)="OnFileInputChanged($event)" />
+	</div>
+
+	<mat-form-field>
+		<input [(ngModel)]="tileSize" matInput min="1" type="number" placeholder="Tile size">
+	</mat-form-field>
+</div>
+<div mat-dialog-actions>
+	<button mat-flat-button color="" (click)="OnCloseClick()">Close</button>
+	<button mat-flat-button color="primary" (click)="OnLoadClick()" [disabled]="tileSize < 1 || tileSize == undefined">Load</button>
+</div>

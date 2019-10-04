@@ -1,0 +1,22 @@
+<mat-accordion class="mt4">
+
+	<mat-expansion-panel>
+		<mat-expansion-panel-header>
+			<mat-panel-title>
+				Grid
+			</mat-panel-title>
+		</mat-expansion-panel-header>
+
+		<mat-form-field>
+			<input [(ngModel)]="tileSize" (change)="OnTileSizeChange()" matInput min="1" [max]="max" type="number" placeholder="Tile size">
+		</mat-form-field>
+
+		<mat-form-field>
+			<input [(ngModel)]="rows" (change)="OnRowsChange()" matInput placeholder="Rows" min="1" [max]="max" type="number">
+		</mat-form-field>
+
+		<mat-form-field>
+			<input [(ngModel)]="columns" (change)="OnColumnsChange()" matInput placeholder="Columns" min="1" [max]="max" type="number">
+		</mat-form-field>
+	</mat-expansion-panel>
+</mat-accordion>

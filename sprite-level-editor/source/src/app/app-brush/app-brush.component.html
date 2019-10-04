@@ -1,0 +1,15 @@
+<mat-accordion class="mt4">
+
+  <mat-expansion-panel>
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        {{ name }}
+      </mat-panel-title>
+    </mat-expansion-panel-header>
+
+    <div class="canvas-collection">
+      <img [width]="width" [height]="height" [src]="imageBuffer">
+      <canvas (click)="OnCanvasClick($event)" [width]="width" [height]="height" #brushCanvas></canvas>
+    </div>
+  </mat-expansion-panel>
+</mat-accordion>

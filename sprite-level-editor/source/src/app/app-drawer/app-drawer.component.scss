@@ -1,0 +1,10 @@
+:host {
+    margin-top: 64px;
+    overflow: auto;
+    display: block;
+    height: calc(100% - 64px);
+}
+
+canvas {
+    cursor: pointer;
+}

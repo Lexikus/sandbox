@@ -1,0 +1,7 @@
+<app-brush *ngFor="let brush of brushes" [tileSize]="brush.tileSize" [imageBuffer]="brush.imageBuffer" [type]="brush.type"
+    [width]="brush.width" [height]="brush.height" [name]="brush.name" [image]="brush.image">
+</app-brush>
+
+<button matTooltip="Add tile sheet" (click)=OpenDialog() mat-fab color="primary">
+    <mat-icon mat-raised-button>add</mat-icon>
+</button>

@@ -1,0 +1,27 @@
+@import "../assets/scss/variable";
+
+mat-drawer-content {
+    height: 100vh;
+    overflow: hidden;
+}
+
+#sidebar-right {
+    width: 270px;
+}
+
+#sidebar-left {
+    width: 40vw;
+}
+
+mat-toolbar {
+    position: fixed;
+    top: 0px;
+}
+
+.spacer {
+    flex: 1 1 auto;
+}
+
+mat-icon {
+    cursor: pointer;
+}
